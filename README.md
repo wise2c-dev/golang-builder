@@ -1,2 +1,7 @@
 # golang-builder
-内置 protoc protoc-gen-go protoc-gen-micro 工具
+
+### Bin 
+
+- [x] protoc@latest
+- [x] protoc-gen-go@v1.3.2
+- [x] protoc-gen-micro@latest
