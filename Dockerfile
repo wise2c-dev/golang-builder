@@ -1,9 +1,8 @@
-FROM golang:1.13.1-alpine
+FROM golang:1.13.2-alpine
 
-ENV GOPROXY=https://goproxy.io
+RUN apk add -U tzdata make git
 
-RUN sed -i "s|http://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g" /etc/apk/repositories && \
-    apk add -U tzdata make protobuf git
+RUN apk add protobuf==3.6.1-r1
 
 RUN GIT_TAG="v1.3.2" && \
     go get -d -u github.com/golang/protobuf/protoc-gen-go && \
